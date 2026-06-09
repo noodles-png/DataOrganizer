@@ -43,7 +43,20 @@ public class FileOrganizer
         {
             string targetDir = Path.Combine(_path, entry.Value);
             string targetFile = Path.Combine(targetDir, Path.GetFileName(entry.Key));
-
+            
+            // If duplicates in the directory exist: add a counter (n) to the name e.g. "File(1)"
+            if (File.Exists(targetFile))
+            {
+                string name = Path.GetFileNameWithoutExtension(entry.Key);
+                string ext = Path.GetExtension(entry.Key);
+                int count = 1;
+                while (File.Exists(targetFile))
+                {
+                    targetFile = Path.Combine(targetDir, $"{name} ({count}){ext}");
+                    count++;
+                }
+            }
+            
             Console.WriteLine($"Moving: {entry.Key} → {targetFile}");
 
             Directory.CreateDirectory(targetDir);
