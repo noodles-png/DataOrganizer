@@ -1,13 +1,14 @@
 ﻿using DataOrganizer;
 
 
-string directoryPath = "Insert Directory here"; // Insert Path in between "..."
+string directoryPath = "C:\\Users\\PatrickCarillo\\Downloads"; // Insert Path in between "..."
 
 var program = new FileOrganizer(directoryPath);
 
 if (!Directory.Exists(directoryPath))
 {
     Console.WriteLine("Directory doesn't exist");
+    Console.ReadKey();
     return;
 }
 
@@ -34,9 +35,10 @@ while (true)
         }
         else
         {
-            return;
+            break;
         }
     }
 }
 
-
+Console.WriteLine("Press any key to close...");
+Console.ReadKey();

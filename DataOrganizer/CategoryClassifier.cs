@@ -11,7 +11,8 @@ public class CategoryClassifier
         {"Documents", new[] { ".pdf", ".docx", ".odt", ".xls", ".xlsx", ".txt"} }, 
         {"Music", new[] {".wav", ".wma", ".mp3"} }, 
         {"Videos", new[] {".mp4", ".mpeg", ".avi"} },
-        {"Code", new[] {".py", ".cs", ".html", ".js", ".css"} }
+        {"Code", new[] {".py", ".cs", ".html", ".js", ".css"} },
+        {"Executables", new[] {".exe", ".iso"}}
     };
     
     // Reads filename extension and returns category
