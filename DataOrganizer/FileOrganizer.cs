@@ -34,7 +34,7 @@ public class FileOrganizer
         
         foreach (var entry in GetFileCategories())
         {
-            Console.WriteLine($"{Path.GetFileName(entry.Key)} ➡️ {entry.Value}");
+            Console.WriteLine($"{Path.GetFileName(entry.Key)} -> {entry.Value}");
         }
     }
     public void Organize()
