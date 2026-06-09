@@ -37,6 +37,8 @@ public class FileOrganizer
             Console.WriteLine($"{Path.GetFileName(entry.Key)} -> {entry.Value}");
         }
     }
+    
+    // Moves files and renames duplicates
     public void Organize()
     {
         foreach (var entry in GetFileCategories())

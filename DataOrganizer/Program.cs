@@ -1,8 +1,15 @@
 ﻿using DataOrganizer;
 
-string directoryPath = "Insert Directory here"; // Insert Path inbetween "..."
 
-var program = new FileOrganizer($@"{directoryPath}");
+string directoryPath = "Insert Directory here"; // Insert Path in between "..."
+
+var program = new FileOrganizer(directoryPath);
+
+if (!Directory.Exists(directoryPath))
+{
+    Console.WriteLine("Directory doesn't exist");
+    return;
+}
 
 while (true)
 {
