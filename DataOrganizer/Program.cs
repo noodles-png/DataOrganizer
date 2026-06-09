@@ -1,7 +1,7 @@
 ﻿using DataOrganizer;
 
 
-string directoryPath = "C:\\Users\\PatrickCarillo\\Downloads"; // Insert Path in between "..."
+string directoryPath = "Insert/Path/here"; // Insert Path in between "..."
 
 var program = new FileOrganizer(directoryPath);
 
